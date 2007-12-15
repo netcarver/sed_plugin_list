@@ -15,7 +15,7 @@ $plugin['name'] = 'sed_plugin_list';
 $plugin['version'] = '0.1' . $revision;
 $plugin['author'] = 'Netcarver';
 $plugin['author_uri'] = 'http://txp-plugins.netcarving.com';
-$plugin['description'] = 'Lists plugins used by site';
+$plugin['description'] = 'Lists plugins used by your site';
 $plugin['type'] = 0;
 
 @include_once('../zem_tpl.php');
@@ -44,7 +44,7 @@ if (0) {
 
 h1(#top). SED Plugin List.
 
-Simple plugin to generate lists and counts of installed plugins.
+Simple plugin to generate lists of installed plugins.
 
 
 h2(#changelog). Change Log
@@ -62,62 +62,6 @@ v0.1
 }
 # --- BEGIN PLUGIN CODE ---
 
-#
-#	Define a prefix for our strings -- it must not have a '-' character in it.
-#
-/*
-if( !defined( 'SED_PL_PREFIX' ) )
-	define( 'SED_PL_PREFIX' , 'sed_pl' );
-
-#===============================================================================
-#	Strings for internationalisation...
-#===============================================================================
-global $_sed_pl_l18n;
-$_sed_pl_l18n = array(
-	'disabled' => 'disabled' ,
-#	'' => '',
-	);
-
-function _sed_pl_gtxt( $what , $args=array() )
-	{
-	global $textarray;
-	global $_sed_pl_l18n;
-
-	$key = SED_BUV_PREFIX . '-' . $what;
-	$key = strtolower($key);
-
-	if(isset($textarray[$key]))
-		$str = $textarray[$key];
-	else
-		{
-		$key = strtolower($what);
-
-		if( isset( $_sed_pl_l18n[$key] ) )
-			$str = $_sed_pl_l18n[$key];
-		else
-			$str = $what;
-		}
-	$str = strtr( $str , $args );
-	return $str;
-	}
-
-#===============================================================================
-#	MLP Registration...
-#===============================================================================
-register_callback( '_sed_pl_enumerate_strings' , 'l10n.enumerate_strings' );
-function _sed_pl_enumerate_strings()
-	{
-	global $_sed_pl_l18n;
-	$r = array	(
-				'owner'		=> 'sed_plugin_list',
-				'prefix'	=> SED_PL_PREFIX,
-				'lang'		=> 'en-gb',
-				'event'		=> 'public',
-				'strings'	=> $_sed_pl_l18n,
-				);
-	return $r;
-	}
-*/
 #===============================================================================
 #	Public-side features...
 #===============================================================================
@@ -125,9 +69,8 @@ if( 'public' === @txpinterface )
 	{
 	function sed_plugin_list( $atts )
 		{
-		$debug = 0;
-
 		extract(lAtts(array(
+			'debug' => 0,
 			'type' => '',
 			'link_name' => 1,
 			'show_author' => 1,
