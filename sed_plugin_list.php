@@ -1,6 +1,6 @@
 <?php
 
-$plugin['revision'] = '$LastChangedRevision: 91 $';
+$plugin['revision'] = '$LastChangedRevision$';
 
 $revision = @$plugin['revision'];
 if( !empty( $revision ) )
