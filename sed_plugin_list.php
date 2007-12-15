@@ -89,7 +89,7 @@ if( 'public' === @txpinterface )
 			'break' => 'li',
 			'breakclass' => 'plugin-item',
 			'show_count' => 0,
-			'exclusions' => 'sed_block_unwanted_visitors,pap_contact_cleaner,mem_akismet',
+			'exclusions' => '',
 			),$atts));
 
 		$exclusions = explode( ',' , $exclusions );
