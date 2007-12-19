@@ -109,7 +109,7 @@ if( 'public' === @txpinterface )
 		if( $hide_disabled )
 			$w[] = 'status=\'1\'';
 
-		$where = join( ' AND ' , $w );
+		$where = join( ' and ' , $w );
 
 		if( empty( $where ) )
 			$where = '1=1';
@@ -117,7 +117,7 @@ if( 'public' === @txpinterface )
 		$sort = '';
 		if( '' !== $sort_field )
 			{
-			$sort = ' order by `'.doSlash($sort_field).'` '.$sort_dir;
+			$sort = ' order by `'.doSlash($sort_field).'` '.doSlash($sort_dir);
 			}
 
 		#
@@ -141,7 +141,7 @@ if( 'public' === @txpinterface )
 					$item = tag( $item , 'a' , ' href="'.$plugin['author_uri'].'" rel="nofollow" ' );
 
 				if( $show_version )
-					$item .= tag( ' v'.$plugin['version'] , $versionwrap , ' class="'.$versionclass.'" rel="nofollow" ' );
+					$item .= tag( ' v'.$plugin['version'] , $versionwrap , ' class="'.$versionclass.'" ' );
 
 				if( $show_description )
 					$item .= tag( $plugin['description'] , $descriptionwrap , ' class="'.$descriptionclass.'" ');
