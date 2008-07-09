@@ -1,18 +1,7 @@
 <?php
 
-$plugin['revision'] = '$LastChangedRevision$';
-
-$revision = @$plugin['revision'];
-if( !empty( $revision ) )
-	{
-	$parts = explode( ' ' , trim( $revision , '$' ) );
-	$revision = $parts[1];
-	if( !empty( $revision ) )
-		$revision = '.' . $revision;
-	}
-
 $plugin['name'] = 'sed_plugin_list';
-$plugin['version'] = '0.1' . $revision;
+$plugin['version'] = '0.1';
 $plugin['author'] = 'Netcarver';
 $plugin['author_uri'] = 'http://txp-plugins.netcarving.com';
 $plugin['description'] = 'Lists plugins used by your site';
