@@ -20,46 +20,6 @@ $plugin['type'] = 0;
 
 @include_once('../zem_tpl.php');
 
-if (0) {
-?>
-<!-- CSS SECTION
-# --- BEGIN PLUGIN CSS ---
-	<style type="text/css">
-	div#sed_help td { vertical-align:top; }
-	div#sed_help code { font-weight:bold; font: 105%/130% "Courier New", courier, monospace; background-color: #FFFFCC;}
-	div#sed_help code.sed_code_tag { font-weight:normal; border:1px dotted #999; background-color: #f0e68c; display:block; margin:10px 10px 20px; padding:10px; }
-	div#sed_help a:link, div#sed_help a:visited { color: blue; text-decoration: none; border-bottom: 1px solid blue; padding-bottom:1px;}
-	div#sed_help a:hover, div#sed_help a:active { color: blue; text-decoration: none; border-bottom: 2px solid blue; padding-bottom:1px;}
-	div#sed_help h1 { color: #369; font: 20px Georgia, sans-serif; margin: 0; text-align: center; }
-	div#sed_help h2 { border-bottom: 1px solid black; padding:10px 0 0; color: #369; font: 17px Georgia, sans-serif; }
-	div#sed_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
-	div#sed_help ul ul { font-size:85%; }
-	div#sed_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
-	</style>
-# --- END PLUGIN CSS ---
--->
-<!-- HELP SECTION
-# --- BEGIN PLUGIN HELP ---
-<div id="sed_help">
-
-h1(#top). SED Plugin List.
-
-Simple plugin to generate lists of installed plugins.
-
-
-h2(#changelog). Change Log
-
-v0.1
-
-* Initial implementation.
-
- <span style="float:right"><a href="#top" title="Jump to the top">top</a></span>
-
-</div>
-# --- END PLUGIN HELP ---
--->
-<?php
-}
 # --- BEGIN PLUGIN CODE ---
 
 #===============================================================================
@@ -157,5 +117,40 @@ if( 'public' === @txpinterface )
 	}
 
 # --- END PLUGIN CODE ---
+/*
+# --- BEGIN PLUGIN CSS ---
+	<style type="text/css">
+	div#sed_help td { vertical-align:top; }
+	div#sed_help code { font-weight:bold; font: 105%/130% "Courier New", courier, monospace; background-color: #FFFFCC;}
+	div#sed_help code.sed_code_tag { font-weight:normal; border:1px dotted #999; background-color: #f0e68c; display:block; margin:10px 10px 20px; padding:10px; }
+	div#sed_help a:link, div#sed_help a:visited { color: blue; text-decoration: none; border-bottom: 1px solid blue; padding-bottom:1px;}
+	div#sed_help a:hover, div#sed_help a:active { color: blue; text-decoration: none; border-bottom: 2px solid blue; padding-bottom:1px;}
+	div#sed_help h1 { color: #369; font: 20px Georgia, sans-serif; margin: 0; text-align: center; }
+	div#sed_help h2 { border-bottom: 1px solid black; padding:10px 0 0; color: #369; font: 17px Georgia, sans-serif; }
+	div#sed_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
+	div#sed_help ul ul { font-size:85%; }
+	div#sed_help h3 { color: #693; font: bold 12px Arial, sans-serif; letter-spacing: 1px; margin: 10px 0 0;text-transform: uppercase;}
+	</style>
+# --- END PLUGIN CSS ---
+-->
+<!-- HELP SECTION
+# --- BEGIN PLUGIN HELP ---
+<div id="sed_help">
 
+h1(#top). SED Plugin List.
+
+Simple plugin to generate lists of installed plugins.
+
+
+h2(#changelog). Change Log
+
+v0.1
+
+* Initial implementation.
+
+ <span style="float:right"><a href="#top" title="Jump to the top">top</a></span>
+
+</div>
+# --- END PLUGIN HELP ---
+*/
 ?>
